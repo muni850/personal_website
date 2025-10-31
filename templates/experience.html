@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section experience-section">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="timeline">
+
+    <!-- Vallynx Solutions -->
+    <div class="timeline-item">
+      <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+      <div class="timeline-content">
+        <h3>Software Developer — Vallynx Solutions Pvt. Ltd.</h3>
+        <p><strong>Location:</strong> Hyderabad, Telangana</p>
+        <span class="time">Aug 2024 — Present</span>
+        <ul>
+          <li>Contributing to enterprise-level ETL tool development for efficient data management and transformation.</li>
+          <li>Developing and maintaining scalable CRM applications using Angular, Node.js, Express.js, and AWS.</li>
+          <li>Collaborating with cross-functional teams to design, test, and deploy secure and high-performance solutions.</li>
+          <li>Enhancing application performance and user experience through continuous optimization and innovation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Naresh I Technologies -->
+    <div class="timeline-item">
+      <div class="timeline-icon"><i class="fas fa-code"></i></div>
+      <div class="timeline-content">
+        <h3>Java Full Stack Trainee — Naresh I Technologies</h3>
+        <p><strong>Location:</strong> Hyderabad, Telangana</p>
+        <span class="time">Jul 2023 — May 2024</span>
+        <ul>
+          <li>Worked with Java, Spring Boot, Hibernate, HTML, CSS, JavaScript, and SQL on live projects.</li>
+          <li>Built responsive web applications and integrated RESTful APIs during full-stack development training.</li>
+          <li>Strengthened problem-solving and debugging skills through real-world simulation projects.</li>
+          <li>Gained practical exposure to frontend, backend, and database integration workflows.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+.experience-section {
+  padding: 3rem 1rem;
+  min-height: 80vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Timeline base */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+/* Timeline item */
+.timeline-item {
+  padding: 1.5rem;
+  position: relative;
+  width: 50%;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -10px;
+}
+
+/* Timeline icon */
+.timeline-icon {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -15px;
+}
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -15px;
+}
+
+/* Content styling */
+.timeline-content {
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content .time {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.timeline-content ul {
+  margin-top: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-content ul li {
+  margin: 0.5rem 0;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.timeline-content ul {
+  margin-top: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-content ul li {
+  margin: 0.6rem 0;
+  padding-left: 0;
+  color: #333;
+  line-height: 1.6;
+  border-left: 3px solid #007bff10;
+  padding-left: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content ul li:hover {
+  border-left: 3px solid #007bff;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding-left: 1rem;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 10px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  .timeline-item::after,
+  .timeline-item:nth-child(even)::after {
+    left: 0;
+  }
+  .timeline-icon {
+    left: -3px !important;
+  }
+}
+</style>
+{% endblock %}

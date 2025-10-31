@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section about-section">
+  <div class="about-container">
+    <div class="about-card">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        Highly motivated and detail-oriented Computer Science graduate with a solid foundation in programming and software development. 
+        Passionate about building real-world applications and contributing to team-driven projects. 
+        Experienced in delivering scalable solutions with a focus on performance, usability, and business impact.
+      </p>
+    </div>
+
+    <div class="traits-card">
+      <h3 class="sub-title">Personal Traits</h3>
+      <div class="traits-grid">
+        <div class="trait">
+          <i class="fas fa-bullseye"></i>
+          <span>Highly self-motivated with a strong drive to achieve goals</span>
+        </div>
+        <div class="trait">
+          <i class="fas fa-smile-beam"></i>
+          <span>Positive attitude with clarity in execution</span>
+        </div>
+        <div class="trait">
+          <i class="fas fa-brain"></i>
+          <span>Strong analytical and problem-solving skills</span>
+        </div>
+        <div class="trait">
+          <i class="fas fa-hard-hat"></i>
+          <span>Hardworking, disciplined, and reliable under pressure</span>
+        </div>
+        <div class="trait">
+          <i class="fas fa-bolt"></i>
+          <span>Quick learner, adaptable to new technologies and environments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+/* Section Layout */
+.about-section {
+  padding: 3rem 1rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-card, .traits-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover, .traits-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Titles */
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Personal Traits */
+.traits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-items: start;
+  text-align: left;
+}
+
+.trait {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #f1f3f5;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.trait:hover {
+  background: #e9ecef;
+}
+
+.trait i {
+  font-size: 1.3rem;
+  color: #007bff;
+}
+
+.trait span {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-card, .traits-card {
+  animation: fadeIn 0.8s ease-in-out;
+}
+</style>
+{% endblock %}

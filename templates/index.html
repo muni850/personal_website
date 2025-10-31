@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <div class="hero-left">
+    <img src="{{ url_for('static', filename='my_profile.jpg') }}" alt="Muni Sundaram" class="profile">
+  </div>
+  <div class="hero-right">
+    <h1 class="glow">Muni Sundaram</h1>
+    <h3 class="muted">SOFTWARE DEVELOPER</h3>
+    <p class="lead">Highly motivated and detail-oriented Computer Science graduate with a solid foundation in programming and software development. Skilled in product development using Angular, Node.js,Core Java, and Web Application development and integration with cloud infrastructure (AWS).</p>
+
+    <div class="cta">
+      <a class="btn" href="/projects">View Projects</a>
+      <a class="btn ghost" href="/contact">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="card">
+    <h4>Experience</h4>
+    <p>Vallynx Solutions Pvt. Ltd. — Software Developer</p>
+  </div>
+  <div class="card">
+    <h4>Education</h4>
+    <p>B.Tech in Computer Science — Audisankara College</p>
+  </div>
+  <div class="card">
+    <h4>Skills</h4>
+    <p>Angular, Node.js, Java, AWS, Docker</p>
+  </div>
+</section>
+{% endblock %}

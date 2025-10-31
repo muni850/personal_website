@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section education-section">
+  <h2 class="section-title">Education</h2>
+
+  <div class="timeline">
+
+    <!-- B.Tech -->
+    <div class="timeline-item">
+      <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="timeline-content">
+        <h3>Audisankara College of Engineering and Technology, Gudur</h3>
+        <p>B.Tech in Computer Science & Engineering (CSE) — Graduated with Distinction</p>
+        <span class="time">Aug 2019 — Jun 2023</span>
+      </div>
+    </div>
+
+    <!-- 12th Class -->
+    <div class="timeline-item">
+      <div class="timeline-icon"><i class="fas fa-university"></i></div>
+      <div class="timeline-content">
+        <h3>Sri Pratibha Junior College, Sullurpeta</h3>
+        <p>Intermediate (MPC Stream)</p>
+        <span class="time">July 2017 — Mar 2019</span>
+      </div>
+    </div>
+
+    <!-- 10th Class -->
+    <div class="timeline-item">
+      <div class="timeline-icon"><i class="fas fa-school"></i></div>
+      <div class="timeline-content">
+        <h3>Government High School, Sullurpeta</h3>
+        <p>Secondary School Education (SSC)</p>
+        <span class="time">—May 2017</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+.education-section {
+  padding: 3rem 1rem;
+  min-height: 80vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+/* Timeline items */
+.timeline-item {
+  padding: 1.5rem;
+  position: relative;
+  width: 50%;
+  background: inherit;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -10px;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -15px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -15px;
+}
+
+.timeline-content {
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content .time {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 10px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  .timeline-item::after,
+  .timeline-item:nth-child(even)::after {
+    left: 0;
+  }
+  .timeline-icon {
+    left: -3px !important;
+  }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section projects-section">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>LynxDi Administrator ETL Tool</h3>
+        <p class="company">Vallynx Solutions Pvt. Ltd., Hyderabad</p>
+        <span class="time">Jul 2024 — Sep 2024</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Role:</strong> Developer</p>
+        <p>Designed and implemented a web-based ETL administration platform for managing enterprise data flows and transformations.</p>
+        <p>Created intuitive dashboards for data extraction, transformation, and load automation with real-time monitoring.</p>
+        <p><strong>Technologies:</strong> Angular, Node.js, Express.js, AWS (EC2, S3, RDS), PostgreSQL, REST API, Docker</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>LynxDi Scheduler ETL Tool</h3>
+        <p class="company">Vallynx Solutions Pvt. Ltd., Hyderabad</p>
+        <span class="time">Sep 2024 — Nov 2024</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Role:</strong> Developer</p>
+        <p>Developed an intelligent scheduler that automates data synchronization jobs, tracks execution history, and handles dependency management.</p>
+        <p>Improved efficiency by introducing asynchronous processing and job retry mechanisms for high-volume data operations.</p>
+        <p><strong>Technologies:</strong> Angular, Node.js, Express.js, AWS Lambda, AWS SQS, PostgreSQL, Redis</p>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>LynxDi Scheduler ETL Tool (Mobile App)</h3>
+        <p class="company">Vallynx Solutions Pvt. Ltd., Hyderabad</p>
+        <span class="time">Dec 2024 — Feb 2025</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Role:</strong> Developer</p>
+        <p>Developed a mobile app for ETL monitoring and notifications, enabling administrators to track scheduled jobs remotely in real-time.</p>
+        <p>Integrated push notifications and visual analytics for job success/failure tracking.</p>
+        <p><strong>Technologies:</strong> Kotlin, Android SDK, Firebase Cloud Messaging (FCM), Node.js, AWS API Gateway, REST APIs</p>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>VALLYNX Company Website</h3>
+        <p class="company">Vallynx Solutions Pvt. Ltd., Hyderabad</p>
+        <span class="time">Mar 2025 — May 2025</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Role:</strong> Developer</p>
+        <p>Developed the official company website for Vallynx Solutions, showcasing products, services, and recruitment information.</p>
+        <p>Implemented SEO optimization, responsive UI, and cloud-hosted deployment with CI/CD automation.</p>
+        <p><strong>Technologies:</strong> Python (Flask), HTML5, CSS3, JavaScript, AWS (S3, Route 53, EC2), PostgreSQL, Docker, Nginx</p>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>LynxDi CRM Management System</h3>
+        <p class="company">Vallynx Solutions Pvt. Ltd., Hyderabad</p>
+        <span class="time">Jun 2025 — Present</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Role:</strong> Developer</p>
+        <p>Building a cloud-based CRM platform to centralize lead tracking, automate client communication, and integrate analytics dashboards.</p>
+        <p>Implementing microservices architecture and real-time data visualization with AWS cloud scalability.</p>
+        <p><strong>Technologies:</strong> Angular, Node.js, Express.js, AWS (EC2, RDS, S3, CloudWatch), PostgreSQL, Docker, Kafka</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.projects-section {
+  padding: 3rem 1rem;
+  min-height: 85vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 0.3rem;
+}
+
+.project-header .company {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-header .time {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.project-details {
+  margin-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.project-card:hover .project-details {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.project-details p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.project-details strong {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+{% endblock %}
